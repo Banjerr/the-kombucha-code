@@ -1,6 +1,6 @@
 # The Kombucha Code
 
-![](book/img/front-cover.png?raw=true)
+![](./book/front-cover.png?raw=true)
 
 The open-source "bible" for kombucha brewers
 
