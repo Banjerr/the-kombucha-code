@@ -4,4 +4,4 @@
 
 The open-source "bible" for kombucha brewers
 
-* more coming soon *
+_more coming soon_
