@@ -1,3 +1,5 @@
+## Ancient roots and mystical origins of kombucha
+
 From 220 B.C. to 2023 A.D. and beyond. Amongst kombucha's history there are facts and legends, and the line between the two isn't exactly straight and fine or easy to determine. With its (likely) roots in Northeast China around 220 B.C. you could say this drink has been around the block a few times. As one the stories goes, and there are a few out there, the name *kombucha* is derrived from Dr. Kombu, a Korean physician who introduced the fermented tea to Japan as a medicine for Emperor Ingyo. From there it was introduced to several other countries as a result of trade routes, likely the Silk Road. Amongst the legends, we might never know the identify of the first fermentor, but we can theorize with a high probability that it was somehwere in China for a few key reasons.
 
 ![Drawing of Emperor Ingyo](emperor_ingyo.jpg)
