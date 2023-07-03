@@ -1,6 +1,6 @@
 ## Preface
 
-![](./book/front-cover.png?raw=true)]
+![](./book/front-cover.png?raw=true)
 
 What if I told you there exists a drink made from water, tea, sugar, living cultures, polyphenols (antioxidants), organic acids, bacteria, and yeast? What if I told you one of the first historical records we have of it from China around 221 BCE during the Qin Dynasty, being revered as the "Tea of Immortality"? What if I told you it's pretty simple, fun, and cheap to make at home? If you're still reading then welcome to the club of kombucha lovers! We're glad you're here 😀
 
