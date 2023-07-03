@@ -1,6 +1,6 @@
 # The Kombucha Code
 
-![](./book/front-cover.png?raw=true)
+[![](./book/front-cover.png?raw=true)](https://banjerr.github.io/the-kombucha-code/)
 
 The open-source "bible" for kombucha brewers
 
@@ -16,3 +16,12 @@ A software framework is a structure that helps writing software become more effi
 - [Basics](./basics/all-about-bucha.md)
 - [Components](./components/blueprint.md)
     - [Scoby](./components/scoby-starter.md)
+    - [Tea]()
+    - [Sugar]()
+    - [Water]()
+    - [Flavorings]()
+        - [Fruits]()
+        - [Herbs & Spices]()
+        - [Other stuff]()
+- [Beginner Blueprints]()
+    ...
