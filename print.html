@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>The Kombucha Code</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="./theme/catppuccin.css">
+        <link rel="stylesheet" href="./theme/catppuccin-highlight.css">
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="intro/preface.html">Intro</a></li><li class="chapter-item expanded "><a href="history/roots.html"><strong aria-hidden="true">1.</strong> History</a></li><li class="chapter-item expanded "><a href="basics/all-about-bucha.html"><strong aria-hidden="true">2.</strong> Basics</a></li><li class="chapter-item expanded "><a href="components/blueprint.html"><strong aria-hidden="true">3.</strong> Components</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="components/scoby-starter.html"><strong aria-hidden="true">3.1.</strong> Scoby</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.2.</strong> Tea</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.3.</strong> Sugar</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.4.</strong> Water</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.5.</strong> Flavorings</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">3.5.1.</strong> Fruits</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.5.2.</strong> Herbs & Spices</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.5.3.</strong> Other stuff</div></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Beginner Blueprints</div></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="latte">Latte</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="frappe">Frappé</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="macchiato">Macchiato</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mocha">Mocha</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">The Kombucha Code</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="preface"><a class="header" href="#preface">Preface</a></h2>
+<p><img src="intro/./front-cover.png?raw=true" alt="" /></p>
+<p>What if I told you there exists a drink made from water, tea, sugar, living cultures, polyphenols (antioxidants), organic acids, bacteria, and yeast? What if I told you one of the first historical records we have of it from China around 221 BCE during the Qin Dynasty, being revered as the &quot;Tea of Immortality&quot;? What if I told you it's pretty simple, fun, and cheap to make at home? If you're still reading then welcome to the club of kombucha lovers! We're glad you're here 😀</p>
+<p>Kombucha is a delightful effervescent drink made from tea that has been fermented with a SCOBY. No, not that crime solving canine - a Symbiotic Culture of Bacteria and Yeast, often referred to as &quot;the Mother&quot;. With each brew, more layers of SCOBY will be built up - as if birthing babies which will grow up to be delicious drinks some day. Kombucha is often mistaken for a &quot;mushroom tea&quot;; technically the SCOBY <em>is</em> in the fungus family, but there are no 🍄 here (unfortunately). </p>
+<p>I have to be honest - the first <em>few</em> times that I tried kombucha (from the store, mind you) I was not a fan, at all. It tasted a bit tangy, but not exactly what I'd call &quot;delicious&quot;. I tried several of the &quot;major&quot; brands, but simply did not care for them very much. Much later I disovered the reasoning for this is that it's <em>pastuerized</em>; the pasteurization process effectively creates &quot;dead&quot; kombucha. You effectively get a brew with much less flavor and far inferior health benefits. So, I figured it just wasn't for me. That all changed when I met a colleague who gave me a SCOBY and gave me the 'bucha bug. So, I did some research and did some fermenting and did some tasting and fell in love with the results (and the process too)! </p>
+<p>Aside from brewing the 'bucha, I also enjoy the world of software engineering. In software engineering you typically start with a problem and then devise a solution that can easily be repeated. Often times the use of a tool called a <em>framework</em> is used to provide a defined way of handling certain issues/problems. The way frameworks do this is by providing building blocks, which can be utilized together in any number of ways to create any number of outcomes. The aim of this book is to be a <em>framework</em> of sorts for the brewing of kombucha 🍾</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="ancient-roots-and-mystical-origins-of-kombucha"><a class="header" href="#ancient-roots-and-mystical-origins-of-kombucha">Ancient roots and mystical origins of kombucha</a></h2>
+<p>From 220 B.C. to 2023 A.D. and beyond. Amongst kombucha's history there are facts and legends, and the line between the two isn't exactly straight and fine or easy to determine. With its (likely) roots in Northeast China around 220 B.C. you could say this drink has been around the block a few times. As one the stories goes, and there are a few out there, the name <em>kombucha</em> is derrived from Dr. Kombu, a Korean physician who introduced the fermented tea to Japan as a medicine for Emperor Ingyo. From there it was introduced to several other countries as a result of trade routes, likely the Silk Road. Amongst the legends, we might never know the identify of the first fermentor, but we can theorize with a high probability that it was somehwere in China for a few key reasons.</p>
+<p><img src="history/emperor_ingyo.jpg" alt="Drawing of Emperor Ingyo" /></p>
+<p>Traditional Chinese Medicine, which is more than 5000 years old(!) finds use for nearly every plant in nature, it would stand to reasoning that they &quot;discovered&quot; kombucha first. The Chinese are famous for their quest for longevity elixirs and were the first to ferment cabbage (which is very healthful). In the 1960's, during the Cultural Revolution in China, Kombucha could be found in just about every single household and it had an array of aliases like “Sea Treasure” (海寶) “haibao” or “haipao”, “Stomach Treasure” (胃寶) “weibao” or “weipao” and “Sea Mushroom”(海蘑菇) “haimogu”. Several research studies can be found in China from the 1980’s that indicate it’s primary benefit was for improving digestion. </p>
+<p>Throughout history there are many instances of &quot;fermented vingegary beverages&quot; in various places. One such occurrence is from the flasks of Genghis Khan and his armies as they conquered a very lage part of Asia around 1200 B.C. At the same time there are stories told of Japanese samurai warriors that carried inside their wine skin a fermented elixir that was reported to give them energy. Around this point the trail seems to go dark for several hundreds of years, but soon events would occur to bring people from across the globe to the same region - the Opium Wars.</p>
+<p>Without getting into many of the details that aren't pertinent to the topic of kombucha, the Opium Wars brought together armies from the Chinese, Korean, Japanese and Russian forces to battle for influence over land. Inevitably having these groups together resulted in the exchange of many cultural elements; the one we care about here being the fermentation process and culture. There soon began a large scientific push by German doctors, working the Russian camps, to begin to understand the unique elements at play during fermentation. It wasn't long after that scientific records begin popping up in Russia, the earliest known record being written by A.A. Bachinskaya in 1913.  In the early 20th century, Bachinskaya collected samples of SCOBY's from across Russia to study the yeast and bacteria that comprise the “mushroom.”</p>
+<p>In Russia, the SCOBY is called “čajnyj grib” (literally “tea mushroom”), while the beverage itself is known as “grib” (“mushroom” or affectionately “gribok” – “little mushroom”) or “tea kvass”. Dr. Rudolf Sklenar witnessed a Russian peasant use Kombucha to help injured soldiers in WWI and subsequently brought the culture back to his native homeland, Germany, where kombucha was used in a specific protocol to heal cancer patients. Throughout the 1920's and 1930's there are hundreds of hundreds of studies conducted, many of which focused on improvements in digestion and diabetes. Kombucha was extremely popular in Russia and Europe - until WWII. During this time sugar and tea were rationed, and being as they are two of the main ingredients, it's easy to see why there was a dip in the number of homes brewing their own elixir of life. Fortunately there were enough people that were able to preseve the tradition and the war and rations eventaually came to an end. </p>
+<p>Another legend of the kombucha culture comes from Russia during the 1980's from towns and residents near the Chernobyl meltdown. The effects of radiation are horrific and awful for any living being within it's reach. However, nurses and doctors began to notice there were a group of people seemingly less affected than the rest of the population; many of whom were elderly women. After tracing back their common habits/dietary patterns/etc. they concluded that the common thread between this group was that they regularly consumed kombucha. While this can't exactly be confirmed or disproven, there are more recent scientific studies that have proven very interesting. One study from 2008 showed that rats with livers damaged by irradiation or exposure to harmful chemicals had improved function after consuming kombucha. A follow up study found that kombucha does provide a “radioprotective effect against ionizing radiation.” It’s important to note that increased dosages provided increased protection.</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="a-bit-about-the-bucha"><a class="header" href="#a-bit-about-the-bucha">A bit about the 'bucha</a></h2>
+<p>We have entertained the theories about where kombucha came from and a bit of where it's turned up throughout history. Now it's time to get scientific. What makes kombucha so awesome? It all starts with fermentation. By definition, fermentation means the chemical breakdown of a substance by bacteria, yeasts, or other microorganisms, typically involving effervescence and the giving off of heat. It's a technique that has been used since as early as 7200 B.C. to preserve meat, vegetables, and fruits. </p>
+<p>In regards to kombucha the fermentation process involves the SCOBY and the tea, specifically the sugar in the tea. The SCOBY is introduced to the tea and soon begins to form a film on top of the tea as to get as much contact with the nutritent medium (the tea) as possible. The tea is left out covered with a breathable cloth - and the magic of a complex chemical dance begins. Acetic acid bacteria, such as Gluconacetobacter and Acetobacter, and lactic acid bacteria, such as Lactobacillus, work with several yeast populations to inhibit the growth of potential contaminating bacteria. Over a period of about seven to 10 days, they convert the sugar and tea to a lightly carbonated, slightly sour drink composed of amino acids, vitamins and enzymes - that is DELICOUS and NUTRITIOUS! </p>
+<h2 id="bill-of-materials"><a class="header" href="#bill-of-materials">Bill Of Materials</a></h2>
+<p>Brewing kombucha at home is simple, cost-effective, and rewarding. There are just a few things that you'll need to succeed (many of which you probably already have). The first being a clean spot to brew - I brew my kombucha in my kitchen cupboards because it's a cool, undisturbed spot with little to no sunlight. </p>
+<p>The next item on the list of &quot;must haves&quot; for brewing your own kombucha is a fermentation vessel. Generally glass is widely accepted as the best material to brew kombucha in at home. A large gallon sized glass jar is perfect, but you can be creative. It's typically suggested to avoid prolonged contact with metal, as it can interfere with the SCOBY and brew in general - however, if you have stainless stell that is higher than grade 305 then you'll be just fine. Some brewers like to utilize a fermentation vessel that has a spout on the bottom; this helps ease of bottling later on and can lend itself to a &quot;continuous brew&quot; style more easily (we'll touch on these different styles later).</p>
+<p>// picture of fermentation vessels in kitchen cupboard</p>
+<p>Of course, you won't be able to brew kombucha without the SCOBY and a little bit of starter liquid (essentially just kombucha to keep the SCOBY happy and give your brew a bit of a kick start). You can obtain a SCOBY from your local friendly kombucha pusher - or there are a number of reputable brands to buy SCOBY's from (Amazon has quite a few, of course). Not all SCOBY are created equal, so keep a keen eye out for anything that might look &quot;weird&quot; (we'll cover what is considered to look &quot;weird&quot; in later chapters).</p>
+<p>// picture of SCOBY</p>
+<p>A few more essentials for brewing a nice kombucha are tea, sugar, and leaves. The types of teas and sugars that can be used are vast and of course we'll cover them all in detail in later chapters. Pure black, green, white, and oolong tea are generally considered to be the &quot;top dogs&quot; and most kombuch brewers use these, or combinations of them, for various kombucha brews. Sugar is another area that deserves a deeper dive, but ultimately pure cane sugar is the most effecient source of surcrose to convert the yeasts. Water is a bit of a similar topic, but basically clean, filtered water is what you want here. </p>
+<p>// picture of tea, sugar, water</p>
+<p>These next supplies aren't exactly required, but depending on your goals with brewing kombucha they might be helpful. Glass swing top bottles - these are used for the &quot;second fermentation&quot;, which is when other flavorings can be introduced to the kombucha brew. These bottles come in various sizes and shapes and can be reused over and over. Funnel - it's purpose is pretty self explanatory; when transfering your kombucha to swing top bottles this is very much a requirement. Fruit/herbs/flavorings - this is another pretty obvious resource for kombuchah brewing. During the &quot;second fermentation&quot; you can introduce fruits (dried and frozen are what I typically use), herbs, flavorings, spices, etc. to add more flavor and nutrients to your brew. </p>
+<p>// picture of swing top bottles, funnel, and fruits/flavors</p>
+<h2 id="birds-eye-view"><a class="header" href="#birds-eye-view">Birds Eye View</a></h2>
+<p>Essentially the process is extremely simple; just a little bit of work and a little bit of waiting around to let mother nature take the wheel. We will dig more into each specific component, but we're going to walk through a typical flow for a full brew at a birds eye level now. First you'll need to brew the tea, which can vary with types of teas and types of sugars one might choose. Next is the introduction of the SCOBY and starter tea (just a bit of 'bucha to kick things off nicely) to the tea that was just brewed. Now it's a waiting game - some folks like to use pH strips to determine when the brew is at their desired level, others choose to continually taste a sip every day until they're at the right spot - this is another area where variance will be encountered, as everyone prefers a slightly different tang/acidity/sweetness level. At this point, the brew is done - unless you'd like to go for a second fermentation to add some fizz; this is also the point at which you would introduce flavorings/fruits/spices. The second fermentation length also varies, as different fruits/spices/flavorings will add more/less sugar and speed up fermentation - too long of a second fermentation can lead to 'bucha that is TOO fizzy and can rapidly expel itself from the swing top bottle once pressure is relieved (this can make a HUGE mess - pro tip: cover the top of the bottle with a rag when opening, cuts down on the potential splatter distance by a great amount).</p>
+<h2 id="cleanliness"><a class="header" href="#cleanliness">Cleanliness</a></h2>
+<p>As with any type of fermentation, we are dealing with bacteria and yeast - there's always a potential for bacteria/yeast/etc. that we do not desire to make it's way into a brew. This is why cleanliness is paramount in brewing kombucha. As long as we ensure that our working space, tools, containers, and hands are clean then we can feel perfectly happy that our brews have the best shot possible. Having the kombucha brewing in a clean spot also ensures that outside contaimants, whether from some old fruit/old bread/outside/etc, do not make their way into our brew. Contaminants are not fairly common and we will dig into what to look out for in a later chapter, but as always - &quot;when in doubt, throw it out&quot; is always a good motto to remember with fermentation.</p>
+<div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h2 id="scoby"><a class="header" href="#scoby">SCOBY</a></h2>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </body>
+</html>
