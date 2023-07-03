@@ -10,6 +10,9 @@ A software framework is a structure that helps writing software become more effi
 
 ### Table Of Contents (so far)
 
-- [Intro](./book/intro/preface.md)
-- [History](./book/history/roots.md)
-- [Basics](./book/basics/all-about-bucha.md)
+[Intro](./intro/preface.md)
+
+- [History](./history/roots.md)
+- [Basics](./basics/all-about-bucha.md)
+- [Components](./components/blueprint.md)
+    - [Scoby](./components/scoby-starter.md)
